@@ -17,6 +17,26 @@ Iniciativa experimental de engenharia de software, IA local, robótica, processa
 
 **Explorar:** [Website](https://gypsieww3.github.io/cerberus/) · [Projetos interativos](https://gypsieww3.github.io/cerberus/projects.html) · [Estado e evidências](https://github.com/Gypsieww3/cerberus/blob/main/docs/RELEASE_MATRIX.md)
 
+## Estudos de caso de engenharia de software
+
+Projetos de portefólio desenvolvidos com assistência de IA. Os exemplos abaixo usam dados sintéticos.
+
+### Oficina Stock
+
+Ferramenta em **Python e SQLite** para registar materiais e movimentações numa oficina. A CLI devolve JSON para facilitar a integração com outros programas.
+
+- **Exemplo:** entram 8 chapas de MDF e saem 6. Com um mínimo de 2, o material aparece na lista de reposição.
+- **Decisão técnica:** saldo e histórico são atualizados na mesma transação. A escrita é bloqueada antes da leitura do saldo para impedir que duas retiradas concorrentes gastem as mesmas unidades.
+- **Evidência:** cinco testes de integração passaram, incluindo persistência entre execuções, reposição, dados inválidos, saída sem saldo e duas saídas simultâneas.
+
+### Rota Lab
+
+Ferramenta em **JavaScript e Node.js** que calcula o percurso mais rápido em pequenas redes de vias com tempos fornecidos no ficheiro de entrada. Usa o algoritmo de Dijkstra.
+
+- **Exemplo:** Oficina → Centro → Bairro → Cliente leva **21 minutos**. A via entre Centro e Cliente está bloqueada. No percurso Centro → Oficina, a ligação de sentido único exige um desvio que eleva o tempo a **48 minutos**.
+- **Decisão técnica:** lista de adjacências e seleção linear do próximo ponto. No pior caso, o tempo cresce em O(V² + E), onde V é o número de pontos e E o número de ligações.
+- **Evidência:** cinco testes passaram, cobrindo vias bloqueadas e de sentido único, destinos inalcançáveis, entradas inválidas e percurso com origem igual ao destino.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
