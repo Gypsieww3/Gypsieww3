@@ -83,6 +83,18 @@ Laboratório local de integração por webhook em **JavaScript e Node.js**. Envi
 - Todas as tentativas enviam a mesma chave de idempotência. Num dos testes, o recetor usa essa chave para evitar aplicar o evento duas vezes quando a primeira resposta se perde.
 - Nove testes de integração passaram em Linux e Windows, incluindo timeout, rejeição definitiva, redirecionamento e execução da CLI.
 
+### Contract Check
+
+Ferramenta em **Python** para verificar respostas guardadas de uma API. Compara o estado HTTP e a estrutura do corpo com um contrato e gera um relatório JSON adequado a testes automatizados.
+
+| Verificação no exemplo sintético | Resultado |
+| --- | --- |
+| Estado HTTP | Esperado 200, recebido 202. |
+| Total da primeira ordem | Esperado um número, recebido texto. |
+| Contagem de ordens | Campo obrigatório ausente. |
+
+Os caminhos do relatório incluem nomes de campos e índices de listas. Campos adicionais continuam compatíveis. Sete testes passaram em Linux e Windows.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
