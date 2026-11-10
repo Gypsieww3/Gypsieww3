@@ -75,6 +75,14 @@ Validador em **Python** para conferir um catálogo de fornecedor antes da import
 
 O exemplo sintético contém quatro registos, dos quais dois são válidos. A CLI devolve código de saída 1 para permitir que um pipeline interrompa a importação. Sete testes de integração passaram em Linux e Windows, incluindo CSV com aspas, vírgula decimal e registos com várias linhas.
 
+### Relay Lab
+
+Laboratório local de integração por webhook em **JavaScript e Node.js**. Envia um evento JSON e aplica uma política de reenvio com limite de tentativas e espera progressiva.
+
+- Na demonstração, o recetor devolve HTTP 503. O programa espera 150 ms, reenvia o evento e confirma a entrega após receber HTTP 204.
+- Todas as tentativas enviam a mesma chave de idempotência. Num dos testes, o recetor usa essa chave para evitar aplicar o evento duas vezes quando a primeira resposta se perde.
+- Nove testes de integração passaram em Linux e Windows, incluindo timeout, rejeição definitiva, redirecionamento e execução da CLI.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
