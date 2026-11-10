@@ -4,6 +4,8 @@
 
 Iniciativa experimental de engenharia de software, IA local, robótica, processadores RISC-V, simulações e ferramentas de desenvolvimento. Os resultados são publicados com os seus limites e evidências de teste.
 
+**Avaliação com empresas.** [Lote Claro, triagem de medições de qualidade](docs/lote-claro-piloto.md)
+
 ## Projetos em destaque
 
 | Projeto | O que podes consultar |
@@ -110,6 +112,12 @@ Ferramenta em **PowerShell** para analisar o espaço usado numa pasta. Percorre 
 - No exemplo sintético, cinco ficheiros somam 100 bytes. Os dois ficheiros BIN ocupam 80 bytes e ficam no topo do relatório.
 - A ferramenta inclui ficheiros ocultos e reporta separadamente as ligações que deixa de fora. A análise é de leitura.
 - Seis verificações passaram no Windows PowerShell 5.1, incluindo agregação por extensão, empates, caminhos com colchetes e exclusão de uma junction.
+
+### Lote Claro
+
+Ferramenta em **Java** para triagem de medições de qualidade. Compara as leituras com as tolerâncias e com a lista de peças esperadas. Num exemplo sintético, identificou uma peça acima do limite e outra com uma medição em falta. Cinco testes passaram em Linux com Java 21.
+
+[Ver o resultado e a proposta de piloto](docs/lote-claro-piloto.md)
 
 ### Transparência técnica
 
