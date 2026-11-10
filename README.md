@@ -4,7 +4,7 @@
 
 Iniciativa experimental de engenharia de software, IA local, robótica, processadores RISC-V, simulações e ferramentas de desenvolvimento. Os resultados são publicados com os seus limites e evidências de teste.
 
-**Avaliação com empresas.** [Lote Claro, triagem de medições de qualidade](docs/lote-claro-piloto.md)
+**Avaliação com empresas.** [Lote Claro, triagem de medições de qualidade](docs/lote-claro-piloto.md) · [Quatro projetos para avaliação técnica](docs/quatro-projetos-para-piloto.md)
 
 ## Projetos em destaque
 
@@ -16,6 +16,10 @@ Iniciativa experimental de engenharia de software, IA local, robótica, processa
 | [Code Guard](https://github.com/Gypsieww3/cerberus/blob/main/CODE_GUARD.md) | Ferramenta experimental de análise estática Python, piloto sob acordo |
 | [Telemetry Studio](https://github.com/Gypsieww3/cerberus/blob/main/docs/TELEMETRY_STUDIO_PUBLIC.md) | Análise local de telemetria CSV e SQLite |
 | [Control Plane](https://github.com/Gypsieww3/cerberus/blob/main/docs/INTEGRATION_CONTRACT.md) | Painel local de monitorização de serviços, apenas leitura |
+| [Corte Planejado](docs/quatro-projetos-para-piloto.md#corte-planejado) | Plano de corte com perdas de serra e sobras por barra |
+| [Reconcilia Pedidos](docs/quatro-projetos-para-piloto.md#reconcilia-pedidos) | Conferência de quantidades pedidas e recebidas |
+| [Fila SLA](docs/quatro-projetos-para-piloto.md#fila-sla) | Prazos de atendimento em minutos úteis |
+| [Rastro de Lote](docs/quatro-projetos-para-piloto.md#rastro-de-lote) | Rastreio de lotes de fornecedor na produção |
 
 **Explorar:** [Website](https://gypsieww3.github.io/cerberus/) · [Projetos interativos](https://gypsieww3.github.io/cerberus/projects.html) · [Estado e evidências](https://github.com/Gypsieww3/cerberus/blob/main/docs/RELEASE_MATRIX.md)
 
