@@ -37,6 +37,14 @@ Ferramenta em **JavaScript e Node.js** que calcula o percurso mais rápido em pe
 - O algoritmo percorre uma lista de adjacências e seleciona o próximo ponto por busca linear. No pior caso, o tempo cresce em O(V² + E), onde V é o número de pontos e E o número de ligações.
 - Cinco testes passaram, cobrindo vias bloqueadas e de sentido único, destinos inalcançáveis, entradas inválidas e percurso com origem igual ao destino.
 
+### Frame Lab
+
+Descodificador em **C++17** para um protocolo de telemetria de robótica. Lê um fluxo hexadecimal, valida o CRC de cada quadro e volta a procurar a marca de sincronização quando encontra dados inválidos.
+
+- Num fluxo de exemplo com ruído e três quadros, recuperou os dois válidos e sinalizou o quadro corrompido.
+- O descodificador mantém no máximo 36 bytes de entrada em análise por vez. O teste usa dados sintéticos fornecidos pela entrada padrão.
+- Seis testes de integração passaram, incluindo recuperação após CRC incorreto, quadro truncado e dados hexadecimais inválidos.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
