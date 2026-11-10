@@ -63,6 +63,18 @@ Agenda visual de um dia para uma oficina, feita com **HTML, CSS e JavaScript**. 
 
 [Ver a interface com dados sintéticos](docs/turno-claro.jpg)
 
+### CSV Gate
+
+Validador em **Python** para conferir um catálogo de fornecedor antes da importação. Lê o CSV registo a registo e gera um relatório JSON com contagens, tipos de erro e números de linha.
+
+| Linha do catálogo de exemplo | Problema identificado |
+| --- | --- |
+| 4 | SKU duplicado. A primeira ocorrência está na linha 2. |
+| 5 | Quantidade negativa. |
+| 5 | Preço com três casas decimais. |
+
+O exemplo sintético contém quatro registos, dos quais dois são válidos. A CLI devolve código de saída 1 para permitir que um pipeline interrompa a importação. Sete testes de integração passaram em Linux e Windows, incluindo CSV com aspas, vírgula decimal e registos com várias linhas.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
