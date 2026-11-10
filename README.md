@@ -45,6 +45,14 @@ Descodificador em **C++17** para um protocolo de telemetria de robótica. Lê um
 - O descodificador mantém no máximo 36 bytes de entrada em análise por vez. O teste usa dados sintéticos fornecidos pela entrada padrão.
 - Seis testes de integração passaram, incluindo recuperação após CRC incorreto, quadro truncado e dados hexadecimais inválidos.
 
+### Reserva API
+
+API local em **Python e SQLite** para reservar lugares num workshop. Demonstra como uma API lida com pedidos repetidos e concorrentes.
+
+- Num workshop de três lugares, reservar dois devolve HTTP 201. Reenviar o pedido com a mesma chave devolve HTTP 200 e o mesmo ID. Continua a sobrar um lugar.
+- Uma transação SQLite protege a verificação da disponibilidade e o registo da reserva. Quando dois pedidos disputam o último lugar, só um é aceite.
+- Oito testes de integração com conexões HTTP reais passaram. Também verifiquei que a reserva e a chave persistem após reiniciar a aplicação.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
