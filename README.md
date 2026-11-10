@@ -95,6 +95,14 @@ Ferramenta em **Python** para verificar respostas guardadas de uma API. Compara 
 
 Os caminhos do relatório incluem nomes de campos e índices de listas. Campos adicionais continuam compatíveis. Sete testes passaram em Linux e Windows.
 
+### Build Map
+
+Planeador em **TypeScript** para tarefas com dependências. Recebe uma configuração JSON e agrupa em etapas as tarefas que podem correr em paralelo.
+
+- No exemplo de pipeline, `checkout` termina antes de `build` e `lint`, que podem correr em paralelo. `test` depende de `build` e `package` espera pelos testes e pela análise do código.
+- Quando `build` e `test` dependem um do outro, o relatório mostra o ciclo e identifica `package` como bloqueada, mesmo estando fora do ciclo.
+- A verificação estrita de tipos passou. Sete testes passaram em Linux e Windows, incluindo o planeamento de uma cadeia com 3.000 tarefas.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
