@@ -25,17 +25,17 @@ Projetos de portefólio desenvolvidos com assistência de IA. Os exemplos abaixo
 
 Ferramenta em **Python e SQLite** para registar materiais e movimentações numa oficina. A CLI devolve JSON para facilitar a integração com outros programas.
 
-- **Exemplo:** entram 8 chapas de MDF e saem 6. Com um mínimo de 2, o material aparece na lista de reposição.
-- **Decisão técnica:** saldo e histórico são atualizados na mesma transação. A escrita é bloqueada antes da leitura do saldo para impedir que duas retiradas concorrentes gastem as mesmas unidades.
-- **Evidência:** cinco testes de integração passaram, incluindo persistência entre execuções, reposição, dados inválidos, saída sem saldo e duas saídas simultâneas.
+- Entram 8 chapas de MDF e saem 6. Com um mínimo de 2, o material aparece na lista de reposição.
+- A mesma transação atualiza saldo e histórico. Ela adquire o bloqueio de escrita antes de ler o saldo para impedir que duas retiradas concorrentes gastem as mesmas unidades.
+- Cinco testes de integração passaram, incluindo persistência entre execuções, reposição, dados inválidos, saída sem saldo e duas saídas simultâneas.
 
 ### Rota Lab
 
 Ferramenta em **JavaScript e Node.js** que calcula o percurso mais rápido em pequenas redes de vias com tempos fornecidos no ficheiro de entrada. Usa o algoritmo de Dijkstra.
 
-- **Exemplo:** Oficina → Centro → Bairro → Cliente leva **21 minutos**. A via entre Centro e Cliente está bloqueada. No percurso Centro → Oficina, a ligação de sentido único exige um desvio que eleva o tempo a **48 minutos**.
-- **Decisão técnica:** lista de adjacências e seleção linear do próximo ponto. No pior caso, o tempo cresce em O(V² + E), onde V é o número de pontos e E o número de ligações.
-- **Evidência:** cinco testes passaram, cobrindo vias bloqueadas e de sentido único, destinos inalcançáveis, entradas inválidas e percurso com origem igual ao destino.
+- Oficina → Centro → Bairro → Cliente leva **21 minutos**. A via entre Centro e Cliente está bloqueada. No percurso Centro → Oficina, a ligação de sentido único exige um desvio que eleva o tempo a **48 minutos**.
+- O algoritmo percorre uma lista de adjacências e seleciona o próximo ponto por busca linear. No pior caso, o tempo cresce em O(V² + E), onde V é o número de pontos e E o número de ligações.
+- Cinco testes passaram, cobrindo vias bloqueadas e de sentido único, destinos inalcançáveis, entradas inválidas e percurso com origem igual ao destino.
 
 ### Transparência técnica
 
