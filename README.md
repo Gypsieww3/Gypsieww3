@@ -53,6 +53,16 @@ API local em **Python e SQLite** para reservar lugares num workshop. Demonstra c
 - Uma transação SQLite protege a verificação da disponibilidade e o registo da reserva. Quando dois pedidos disputam o último lugar, só um é aceite.
 - Oito testes de integração com conexões HTTP reais passaram. Também verifiquei que a reserva e a chave persistem após reiniciar a aplicação.
 
+### Turno Claro
+
+Agenda visual de um dia para uma oficina, feita com **HTML, CSS e JavaScript**. Organiza tarefas em três estações e guarda as alterações no navegador.
+
+- Marcar uma tarefa em Corte das 08:30 às 09:00 gera um conflito com um turno existente. O mesmo horário é aceite em Acabamento, que está livre.
+- Dois turnos podem tocar na mesma hora sem se sobrepor. O formulário explica o erro e mantém os dados introduzidos para correção.
+- Seis testes de ponta a ponta passaram no Edge, incluindo persistência após recarregar e funcionamento num ecrã de 375 px.
+
+[Ver a interface com dados sintéticos](docs/turno-claro.jpg)
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
