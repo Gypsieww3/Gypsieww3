@@ -103,6 +103,14 @@ Planeador em **TypeScript** para tarefas com dependências. Recebe uma configura
 - Quando `build` e `test` dependem um do outro, o relatório mostra o ciclo e identifica `package` como bloqueada, mesmo estando fora do ciclo.
 - A verificação estrita de tipos passou. Sete testes passaram em Linux e Windows, incluindo o planeamento de uma cadeia com 3.000 tarefas.
 
+### Pasta Radar
+
+Ferramenta em **PowerShell** para analisar o espaço usado numa pasta. Percorre as subpastas e devolve um relatório JSON com os maiores ficheiros, o total por extensão e eventuais erros de leitura.
+
+- No exemplo sintético, cinco ficheiros somam 100 bytes. Os dois ficheiros BIN ocupam 80 bytes e ficam no topo do relatório.
+- A ferramenta inclui ficheiros ocultos e reporta separadamente as ligações que deixa de fora. A análise é de leitura.
+- Seis verificações passaram no Windows PowerShell 5.1, incluindo agregação por extensão, empates, caminhos com colchetes e exclusão de uma junction.
+
 ### Transparência técnica
 
 Os projetos encontram-se em fases diferentes. Testes internos não equivalem a certificação de segurança, disponibilidade comercial ou validação científica. As demonstrações usam dados sintéticos quando indicado. Códigos proprietários e informações sensíveis permanecem em repositórios privados.
