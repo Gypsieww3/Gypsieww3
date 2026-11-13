@@ -37,11 +37,14 @@ Ferramenta em **Python e SQLite** para registar materiais e movimentações numa
 
 ### Rota Lab
 
-Ferramenta em **JavaScript e Node.js** que calcula o percurso mais rápido em pequenas redes de vias com tempos fornecidos no ficheiro de entrada. Usa o algoritmo de Dijkstra.
+Ferramenta em **JavaScript e Node.js** que calcula o percurso de menor tempo numa rede de vias. A rota pode incluir paragens obrigatórias na ordem indicada pelo utilizador.
 
-- Oficina → Centro → Bairro → Cliente leva **21 minutos**. A via entre Centro e Cliente está bloqueada. No percurso Centro → Oficina, a ligação de sentido único exige um desvio que eleva o tempo a **48 minutos**.
-- O algoritmo percorre uma lista de adjacências e seleciona o próximo ponto por busca linear. No pior caso, o tempo cresce em O(V² + E), onde V é o número de pontos e E o número de ligações.
-- Cinco testes passaram, cobrindo vias bloqueadas e de sentido único, destinos inalcançáveis, entradas inválidas e percurso com origem igual ao destino.
+| Paragens na rede sintética, entre Oficina e Cliente | Tempo |
+| --- | ---: |
+| Centro → Bairro | 21 min |
+| Bairro → Centro | 29 min |
+
+A rede inclui uma via bloqueada e uma ligação de sentido único. O algoritmo de Dijkstra calcula o percurso mais rápido para cada troço. Se um troço for inalcançável, a ferramenta identifica os seus extremos. Os nove testes passaram, incluindo paragens repetidas, destinos inalcançáveis e validação do tempo total. Desenvolvimento assistido por IA.
 
 ### Frame Lab
 
